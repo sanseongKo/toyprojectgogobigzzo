@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action ="<c:url value = "naverRegister"/>" method="POST">
+<form action ="<c:url value = "register"/>" method="POST">
 	<c:choose>
 		<c:when test="${sessionId != null}">
 				<div>이메일</div>
@@ -21,13 +21,10 @@
 				</div>
 		</c:when>
 	</c:choose>
-			<div>
-			<div>핸드폰 번호</div>
-			<div><input name="phone" required></div>
-		</div>
+			
 		<div>
 			<div>비밀번호</div>
-			<div><input name="password" required></div>
+			<div><input type="password" name="password" required></div>
 		</div>
 		<div>
 			<div>별명</div>

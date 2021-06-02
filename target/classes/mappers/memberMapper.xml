@@ -6,8 +6,8 @@
 
 	<!-- 회원가입 -->
 	<insert id="insertMember" parameterType="memberVO">
-		insert into "MEMBER" ("UID", "NAME", "PASSWORD", "EMAIL", "PHONE", "NICNAME", "REGDATE")
-		values (UID_SEQ.nextval, #{name}, #{password}, #{email}, #{phone}, #{nickname}, sysdate)
+		insert into "MEMBER" ("UID", "NAME", "PASSWORD", "EMAIL", "VERIFICATION", "NICKNAME", "REGDATE")
+		values (UID_SEQ.nextval, #{name}, #{password}, #{email}, 1, #{nickname}, sysdate)
 	</insert>
 	
 	<select id="checkPwd" parameterType="memberVO" resultType="memberVO">

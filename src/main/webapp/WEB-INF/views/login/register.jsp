@@ -35,13 +35,10 @@
                 </div>
                </div>
 	
-		<div>
-			<div>핸드폰 번호</div>
-			<div><input name="phoneNumber" required></div>
-		</div>
+		
 		<div>
 			<div>비밀번호</div>
-			<div><input name="password" required></div>
+			<div><input type = "password" name="password" required></div>
 		</div>
 		<div>
 			<div>별명</div>

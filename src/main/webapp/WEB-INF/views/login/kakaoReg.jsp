@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="<c:url value = "kakaoRegister"/>" method="POST">
+	<form action="<c:url value = "register"/>" method="POST">
 		<c:choose>
 			<c:when test="${sessionId != null}">
 				<div>이메일</div>
@@ -23,16 +23,11 @@
 				<input name="name" required>
 			</div>
 		</div>
-		<div>
-			<div>핸드폰 번호</div>
-			<div>
-				<input name="phoneNumber" required>
-			</div>
-		</div>
+		
 		<div>
 			<div>비밀번호</div>
 			<div>
-				<input name="password" required>
+				<input type="password" name="password" required>
 			</div>
 		</div>
 		<div>

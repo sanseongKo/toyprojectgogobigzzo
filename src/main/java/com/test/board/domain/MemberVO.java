@@ -9,21 +9,20 @@ public class MemberVO {
 	private String email;
 	private String phone;
 	private int verification;
-	private String nickName;
+	private String nickname;
 	private Date regdate;
 	
 	public MemberVO() {}
 
 	public MemberVO(int uid, String name, String password, String email, String phone, int verification,
-			String nickName, Date regdate) {
+			String nickname, Date regdate) {
 		super();
 		this.uid = uid;
 		this.name = name;
 		this.password = password;
 		this.email = email;
-		this.phone = phone;
 		this.verification = verification;
-		this.nickName = nickName;
+		this.nickname = nickname;
 		this.regdate = regdate;
 	}
 
@@ -75,12 +74,12 @@ public class MemberVO {
 		this.verification = verification;
 	}
 
-	public String getNickName() {
-		return nickName;
+	public String getNickname() {
+		return nickname;
 	}
 
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 
 	public Date getRegdate() {
