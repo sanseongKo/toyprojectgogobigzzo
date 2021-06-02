@@ -23,15 +23,17 @@
 				</h3>
 			</c:when>
 			<c:otherwise>
-				<form action="login.userdo" method="post" name="frm"
-					style="width: 470px;">
-					<h2>로그인</h2>
-					<input type="text" name="id" id="id" class="w3-input w3-border"
-						placeholder="아이디" value="${id}"> <br> <input
-						type="password" id="pwd" name="pwd" class="w3-input w3-border"
-						placeholder="비밀번호"> <br> <input type="submit"
-						value="로그인" onclick="#"> <br>
-				</form>
+
+				<h2>로그인</h2>
+				<input type="text" name="id" id="id" class="w3-input w3-border"
+					placeholder="아이디" value="${id}">
+				<br>
+				<input type="password" id="pwd" name="pwd"
+					class="w3-input w3-border" placeholder="비밀번호">
+				<br>
+				<input type="submit" value="로그인" onclick="#">
+				<br>
+
 				<br>
 				<!-- 네이버 로그인 창으로 이동 -->
 				<div id="naver_id_login" style="text-align: center">
@@ -39,15 +41,15 @@
 						src="https://developers.naver.com/doc/review_201802/CK_bEFnWMeEBjXpQ5o8N_20180202_7aot50.png" /></a>
 				</div>
 				<br>
+				<a
+					href="https://kauth.kakao.com/oauth/authorize?client_id=f4978b1a2bf3652715a55bc2538a5dc9&redirect_uri=http://localhost:8080/login/kakaoLogin&response_type=code">
+					kakao 로그인</a>
+				
 			</c:otherwise>
 		</c:choose>
 	</center>
-	<center>
-	  <a href="https://kauth.kakao.com/oauth/authorize?client_id=f4978b1a2bf3652715a55bc2538a5dc9&redirect_uri=http://localhost:8080/login/kakaoLogin&response_type=code">
-   kakao 로그인</a>
-   
-   <a href = "logout">로그아웃</a>
-</center>
+
+
 </body>
 </html>
 

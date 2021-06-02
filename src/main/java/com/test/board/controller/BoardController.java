@@ -91,18 +91,24 @@ public class BoardController {
 
 		return "login/main";
 	}
-	
+	@RequestMapping(value="/register", method = RequestMethod.GET)   
+	public String registerGet() {
+
+
+		return "login/register";
+	}
+
 	//濡쒓렇�씤 �솕硫�
 	@RequestMapping(value="/register", method = RequestMethod.POST)
-	public String registerPost(@ModelAttribute MemberVO memberVO, HttpSession session) {
-		
+	public String registerPost(@ModelAttribute MemberVO memberVO, HttpSession session) {//이거 session 안적어도되는데 
+		System.out.println(memberVO.getName());
 		registerDao.register(memberVO);
 		
 		return "login/main";
 	}
 
 	//�꽕�씠踰� 濡쒓렇�씤 �꽦怨듭떆 callback�샇異� 硫붿냼�뱶
-	@RequestMapping(value = "/callback", method = { RequestMethod.GET, RequestMethod.POST })
+	@RequestMapping(value = "/callback", method = { RequestMethod.GET, RequestMethod.POST})
 	public String callback(Model model, @RequestParam String code, @RequestParam String state, HttpSession session) throws IOException, ParseException {
 
 		OAuth2AccessToken oauthToken;
@@ -137,7 +143,7 @@ public class BoardController {
 	}
 
 	//移댁뭅�삤 濡쒓렇�씤
-	@RequestMapping(value = "/kakaoLogin")
+	@RequestMapping(value = "/kakaoLogin", produces="text/plain;charset=UTF-8")
 	public String kakaoRegisgter(@RequestParam(value = "code", required = false) String code, Model model, HttpSession session) throws Exception{
 
 		String access_Token = kakaoService.getAccessToken(code);
@@ -157,14 +163,7 @@ public class BoardController {
 		return "redirect:login";
 	}
 	
-	//�쉶�썝媛��엯 �씠�룞
-	@RequestMapping(value="/register", method = RequestMethod.GET)   
-	public String registerGet() {
-
-
-		return "login/register";
-	}
-
+	
 
 
 	//�씠硫붿씪 �씤利�(ajax 鍮꾨룞湲� �슂泥� 遺�遺�) 

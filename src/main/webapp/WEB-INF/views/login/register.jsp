@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
-
+<% request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
 </head>
 	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <body>
-	<form action ="<c:url value = "register"/>" method="POST" onsubmit="return jbSubmit();">
+	<form action ="<c:url value = "register"/>" method="POST" onsubmit="return jbSubmit();" >
 		
 				<div class="mail_wrap">
 					<div>이메일</div>
